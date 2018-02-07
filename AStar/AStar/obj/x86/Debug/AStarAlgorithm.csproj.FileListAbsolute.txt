@@ -1,0 +1,46 @@
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\AStar.exe
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\AStar.pdb
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\MonoGame.Framework.dll
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.dll
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.XInput.dll
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\MonoGame.Framework.xml
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.xml
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\SharpDX.XInput.xml
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\obj\x86\Debug\AStarAlgorithm.csprojResolveAssemblyReference.cache
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\obj\x86\Debug\AStarAlgorithm.csproj.CoreCompileInputs.cache
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\obj\x86\Debug\AStar.exe
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\obj\x86\Debug\AStar.pdb
+c:\users\erik.wapner\documents\visual studio 2017\Projects\AStar\AStar\bin\Windows\x86\Debug\Content\spr_box.xnb
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\Content\spr_box.xnb
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\AStar.exe
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\AStar.pdb
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\obj\x86\Debug\AStarAlgorithm.csprojResolveAssemblyReference.cache
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\obj\x86\Debug\AStarAlgorithm.csproj.CoreCompileInputs.cache
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\obj\x86\Debug\AStar.exe
+C:\Users\erik.wapner\AppData\Local\GitHubDesktop\app-1.0.13\AStar-skola\AStar\AStar\obj\x86\Debug\AStar.pdb
