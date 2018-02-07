@@ -19,6 +19,7 @@ namespace AStar
 
         MouseState mouse;
         KeyboardState keyboard;
+        SpriteFont font;
 
         Camera camera;
         int monitorWidth;
@@ -39,8 +40,8 @@ namespace AStar
 
         protected override void Initialize()
         {
-            camera = new Camera(monitorWidth, monitorHeight);
-            GameObject.InitGame(graphics, camera, Content);
+            
+            
             // TODO: Add your initialization logic here
             base.Initialize();
         }
@@ -49,8 +50,10 @@ namespace AStar
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            
-            new Solid(100, 100);
+            font = Content.Load<SpriteFont>("Font");
+            camera = new Camera(monitorWidth, monitorHeight);
+            GameObject.InitGame(graphics, camera, Content, font);
+            new Solid(48+32*2, 48+32*2);
             // TODO: use this.Content to load your game content here
         }
 
@@ -92,6 +95,19 @@ namespace AStar
 
             spriteBatch.Draw(GameObject.Box, GameObject.GridSnap, new Rectangle(0, 0, GameObject.Box.Width, GameObject.Box.Height), Color.Black, 0,
             new Vector2((GameObject.Box.Width / 2), (GameObject.Box.Height / 2)), new Vector2(1, 1), SpriteEffects.None, 1);
+            spriteBatch.End();
+
+            //DRAW GUI ON GUI LAYER
+            spriteBatch.Begin(SpriteSortMode.FrontToBack,
+           BlendState.AlphaBlend,
+           SamplerState.PointClamp, null, null, null, Matrix.CreateTranslation(new Vector3(0 - monitorWidth, 0 - monitorHeight, 0)) * Matrix.CreateRotationZ(0) * Matrix.CreateScale(new Vector3(1, 1, 0)) *
+                Matrix.CreateTranslation(new Vector3(monitorWidth, monitorHeight, 0)));
+
+            foreach (GameObject obj in GameObject.GameObjects.ToList())
+            {
+                obj.DrawGUI(spriteBatch);
+            }
+
             spriteBatch.End();
 
             base.Draw(gameTime);

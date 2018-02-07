@@ -27,6 +27,7 @@ namespace AStar.GameObjects
         public static KeyboardState PreviousKeyboardState;
 
         public static Texture2D Box;
+        public static SpriteFont Font;
 
         public static Vector2 GridSnap
         {
@@ -37,11 +38,12 @@ namespace AStar.GameObjects
             }
         }
 
-        public static void InitGame(GraphicsDeviceManager graphicsDevice, Camera camera, ContentManager content)
+        public static void InitGame(GraphicsDeviceManager graphicsDevice, Camera camera, ContentManager content, SpriteFont font)
         {
             GraphicsDevice = graphicsDevice;
             Camera = camera;
             Content = content;
+            Font = font;
             Box = Content.Load<Texture2D>("spr_box");
         }
 
@@ -102,7 +104,10 @@ namespace AStar.GameObjects
 
 
         }
+        public virtual void DrawGUI(SpriteBatch spriteBatch)
+        {
 
-        
+        }
+
     }
 }

@@ -70,3 +70,4 @@ C:\Users\Erik Wapner\Documents\GitHub\AStar-skola\AStar\AStar\obj\x86\Debug\ASta
 C:\Users\Erik Wapner\Documents\GitHub\AStar-skola\AStar\AStar\obj\x86\Debug\AStarAlgorithm.csproj.CoreCompileInputs.cache
 C:\Users\Erik Wapner\Documents\GitHub\AStar-skola\AStar\AStar\obj\x86\Debug\AStar.exe
 C:\Users\Erik Wapner\Documents\GitHub\AStar-skola\AStar\AStar\obj\x86\Debug\AStar.pdb
+C:\Users\Erik Wapner\Documents\GitHub\AStar-skola\AStar\AStar\bin\Windows\x86\Debug\Content\Font.xnb

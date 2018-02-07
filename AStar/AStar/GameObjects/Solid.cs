@@ -28,10 +28,17 @@ namespace AStar.GameObjects
             base.Draw(spriteBatch);
         }
 
+        public override void DrawGUI(SpriteBatch spriteBatch)
+        {
+            spriteBatch.DrawString(Font, GridSnap.ToString(), new Vector2(20, 80), Color.White);
+        }
+
         public override void DestroyInstance()
         {
             Solids.Remove(this);
             base.DestroyInstance();
         }
+
+        
     }
 }
