@@ -45,6 +45,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="GameObjects\GameObject.cs" />
     <Compile Include="GameObjects\PathFinder.cs" />
+    <Compile Include="GameObjects\Room.cs" />
     <Compile Include="GameObjects\Solid.cs" />
     <Compile Include="GameObjects\Tools - Accessories\Camera.cs" />
     <Compile Include="Program.cs" />

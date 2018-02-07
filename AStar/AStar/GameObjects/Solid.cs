@@ -27,5 +27,11 @@ namespace AStar.GameObjects
         {
             base.Draw(spriteBatch);
         }
+
+        public override void DestroyInstance()
+        {
+            Solids.Remove(this);
+            base.DestroyInstance();
+        }
     }
 }

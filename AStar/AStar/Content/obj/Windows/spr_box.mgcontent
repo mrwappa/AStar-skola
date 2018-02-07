@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/erik.wapner/Documents/visual studio 2017/Projects/AStar/AStar/Content/spr_box.png</SourceFile>
-  <SourceTime>2018-02-07T14:01:59.7024163+01:00</SourceTime>
-  <DestFile>C:/Users/erik.wapner/Documents/visual studio 2017/Projects/AStar/AStar/Content/bin/Windows/spr_box.xnb</DestFile>
-  <DestTime>2018-02-07T14:43:07.5609874+01:00</DestTime>
+  <SourceFile>C:/Users/Erik Wapner/Documents/GitHub/AStar-skola/AStar/AStar/Content/spr_box.png</SourceFile>
+  <SourceTime>2018-02-07T17:39:10.8644895+01:00</SourceTime>
+  <DestFile>C:/Users/Erik Wapner/Documents/GitHub/AStar-skola/AStar/AStar/Content/bin/Windows/spr_box.xnb</DestFile>
+  <DestTime>2018-02-07T17:39:28.407464+01:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2017-09-01T03:35:46+02:00</ImporterTime>
+  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2017-09-01T03:35:46+02:00</ProcessorTime>
+  <ProcessorTime>2017-03-01T16:05:36+01:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

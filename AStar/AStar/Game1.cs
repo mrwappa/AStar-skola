@@ -39,6 +39,7 @@ namespace AStar
 
         protected override void Initialize()
         {
+            camera = new Camera(monitorWidth, monitorHeight);
             GameObject.InitGame(graphics, camera, Content);
             // TODO: Add your initialization logic here
             base.Initialize();
@@ -48,7 +49,7 @@ namespace AStar
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            camera = new Camera(monitorWidth, monitorHeight);
+            
             new Solid(100, 100);
             // TODO: use this.Content to load your game content here
         }
@@ -66,7 +67,7 @@ namespace AStar
             mouse = Mouse.GetState();
             GameObject.Keyboard = keyboard;
             GameObject.Mouse = mouse;
-
+            Camera.Mouse = mouse;
             // TODO: Add your update logic here
             foreach (GameObject obj in GameObject.GameObjects.ToList())
             {
@@ -75,6 +76,7 @@ namespace AStar
             GameObject.PreviousKeyboardState = keyboard;
             GameObject.PreviousMouseState = mouse;
             camera.Update(new Vector2(0, 0));
+
             base.Update(gameTime);
         }
 
@@ -87,6 +89,9 @@ namespace AStar
             {
                 obj.Draw(spriteBatch);
             }
+
+            spriteBatch.Draw(GameObject.Box, GameObject.GridSnap, new Rectangle(0, 0, GameObject.Box.Width, GameObject.Box.Height), Color.Black, 0,
+            new Vector2((GameObject.Box.Width / 2), (GameObject.Box.Height / 2)), new Vector2(1, 1), SpriteEffects.None, 1);
             spriteBatch.End();
 
             base.Draw(gameTime);

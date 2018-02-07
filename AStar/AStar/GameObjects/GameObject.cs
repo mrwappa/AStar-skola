@@ -26,11 +26,23 @@ namespace AStar.GameObjects
         public static KeyboardState Keyboard;
         public static KeyboardState PreviousKeyboardState;
 
+        public static Texture2D Box;
+
+        public static Vector2 GridSnap
+        {
+            get
+            {
+                return new Vector2((float)Math.Floor(Camera.MouseX / Node.NODE_SIZE) * Node.NODE_SIZE + 16,
+                                    (float)Math.Floor(Camera.MouseY / Node.NODE_SIZE) * Node.NODE_SIZE + 16);
+            }
+        }
+
         public static void InitGame(GraphicsDeviceManager graphicsDevice, Camera camera, ContentManager content)
         {
             GraphicsDevice = graphicsDevice;
             Camera = camera;
             Content = content;
+            Box = Content.Load<Texture2D>("spr_box");
         }
 
         public Texture2D Texture { get; protected set; }
@@ -73,14 +85,9 @@ namespace AStar.GameObjects
             return false;
         }
 
-        public void DestroyInstance(GameObject gameObject)
+        public virtual void DestroyInstance()
         {
-            GameObjects.Remove(gameObject);
-            //jag vill inte
-            if(gameObject.GetType() == typeof(Solid))
-            {
-                Solid.Solids.Remove(gameObject as Solid);
-            }
+            GameObjects.Remove(this);
         }
 
         public virtual void Update()
@@ -92,6 +99,10 @@ namespace AStar.GameObjects
         {
             spriteBatch.Draw(Texture, new Vector2(X, Y), new Rectangle(0, 0, Texture.Width, Texture.Height), Color, 0,
                new Vector2((Texture.Width / 2), (Texture.Height / 2)), new Vector2(1, 1), SpriteEffects.None, 1);
+
+
         }
+
+        
     }
 }

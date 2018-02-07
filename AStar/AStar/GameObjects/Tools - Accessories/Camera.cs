@@ -31,6 +31,8 @@ namespace AStar.GameObjects.Tools___Accessories
         float ideal_height;
         float aspect_ratio;
         float width_difference;
+
+
         Random random;
 
         public Camera(int monitorWidth, int monitorHeight)
@@ -44,7 +46,7 @@ namespace AStar.GameObjects.Tools___Accessories
             corresponding_width = 960;//960, 640
 
             //get the aspect ratio and multiply it by our ideal_height to set our ideal_width
-            aspect_ratio = (float)monitorWidth / (float)monitorHeight;//yes, the (float) part matters, otherwise it will floor itself as an int
+            aspect_ratio = (float)monitorWidth / (float)monitorHeight;//yes, the (float) part matters, otherwise it will floor itself as an inte
             ideal_width = (float)Math.Round(ideal_height * aspect_ratio);
 
             //actually forgot what this is(something about pixel perfect scaling?)
@@ -79,6 +81,10 @@ namespace AStar.GameObjects.Tools___Accessories
                 Height++;
             }
 
+            //A problem occurs here when we have a resolution like 1280x768, where width- and heightScale has a decimal number in it like .33.
+            //Rhis leads to sprite distortion. The easiest solution is to simply round or floor the two variables. But then the view gets
+            //bigger than intended. So what one needs to do is find a way to have decimals in these two variables without having distortion as a result.
+            //It's either that or the fact that testing other resolutions on a monitor is faulty
             widthScale = monitorWidth / Width;
             heightScale = monitorHeight / Height;
 
@@ -117,7 +123,11 @@ namespace AStar.GameObjects.Tools___Accessories
             get { return rotation; }
             set { rotation = value; }
         }
+
         public float ScreenShake { get; set; }
+
+
+
         float positionClampX;
         float positionClampY;
         public void Update(Vector2 position)
