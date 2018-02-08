@@ -17,7 +17,7 @@ namespace AStar
         {
             get
             {
-                return new Vector2(Position.X + NODE_SIZE / 2, Position.Y + NODE_SIZE / 2);
+                return new Vector2(Position.X * NODE_SIZE + NODE_SIZE / 2, Position.Y * NODE_SIZE + NODE_SIZE / 2);
             }
         }
         public float DistanceToTarget;
@@ -32,6 +32,7 @@ namespace AStar
                     return -1;
             }
         }
+
         public bool Walkable;
 
         public Node(Vector2 pos, bool walkable)

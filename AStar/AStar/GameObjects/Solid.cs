@@ -21,6 +21,7 @@ namespace AStar.GameObjects
             Y = y;
             Color = Color.PapayaWhip;
             Texture = Content.Load<Texture2D>("spr_box");
+            AStarGrid.Grid[((int)X - Node.NODE_SIZE / 2) / 32][((int)Y - Node.NODE_SIZE/2) / 32].Walkable = false;
         }
 
         public override void Draw(SpriteBatch spriteBatch)
@@ -30,12 +31,13 @@ namespace AStar.GameObjects
 
         public override void DrawGUI(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(Font, GridSnap.ToString(), new Vector2(20, 80), Color.White);
+            
         }
 
         public override void DestroyInstance()
         {
             Solids.Remove(this);
+            AStarGrid.Grid[((int)X - Node.NODE_SIZE / 2) / 32][((int)Y - Node.NODE_SIZE / 2) / 32].Walkable = true;
             base.DestroyInstance();
         }
 

@@ -40,8 +40,6 @@ namespace AStar
 
         protected override void Initialize()
         {
-            
-            
             // TODO: Add your initialization logic here
             base.Initialize();
         }
@@ -87,17 +85,17 @@ namespace AStar
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             // TODO: Add your drawing code here
+
+            //DRAW GAME OBJECTS
             spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, camera.Transform);
+
             foreach (GameObject obj in GameObject.GameObjects.ToList())
             {
                 obj.Draw(spriteBatch);
             }
 
-            spriteBatch.Draw(GameObject.Box, GameObject.GridSnap, new Rectangle(0, 0, GameObject.Box.Width, GameObject.Box.Height), Color.Black, 0,
-            new Vector2((GameObject.Box.Width / 2), (GameObject.Box.Height / 2)), new Vector2(1, 1), SpriteEffects.None, 1);
             spriteBatch.End();
-
-            //DRAW GUI ON GUI LAYER
+            //DRAW ON GUI LAYER
             spriteBatch.Begin(SpriteSortMode.FrontToBack,
            BlendState.AlphaBlend,
            SamplerState.PointClamp, null, null, null, Matrix.CreateTranslation(new Vector3(0 - monitorWidth, 0 - monitorHeight, 0)) * Matrix.CreateRotationZ(0) * Matrix.CreateScale(new Vector3(1, 1, 0)) *
