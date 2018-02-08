@@ -63,7 +63,6 @@ namespace AStar.GameObjects
         {
             //draw the GridSnapMouse position
             spriteBatch.DrawString(Font, GridSnapMouse.ToString(), new Vector2(20, 80), Color.White);
-            
         }
     }
 }

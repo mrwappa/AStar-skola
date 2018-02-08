@@ -134,10 +134,10 @@ namespace AStar.GameObjects
         {
             return ((float)Math.Floor(x / Node.NODE_SIZE) * Node.NODE_SIZE + 16);
         }
-        public void DrawLine(Vector2 start, Vector2 end, Color color, SpriteBatch spriteBatch)
+        public void DrawLine(Vector2 start, Vector2 end, Color color, float depth, SpriteBatch spriteBatch)
         {
             Vector2 delta = end - start;
-            spriteBatch.Draw(Pixel, start, null, color, (float)Math.Atan2(delta.Y, delta.X), Vector2.UnitY * 0.5f, new Vector2(delta.Length(), 1.0f), SpriteEffects.None, 999999999999);
+            spriteBatch.Draw(Pixel, start, null, color, (float)Math.Atan2(delta.Y, delta.X), Vector2.UnitY * 0.5f, new Vector2(delta.Length(), 1.0f), SpriteEffects.None, depth);
         }
 
     }
