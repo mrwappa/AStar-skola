@@ -14,19 +14,21 @@ namespace AStar.GameObjects
     {
         Stack<Node> Path;
         float direction;
-        float movement_speed;
-        float xspeed;
-        float yspeed;
-        float xtarget;
-        float ytarget;
+        float movementSpeed;
+        float xSpeed;
+        float ySpeed;
+        float xTarget;
+        float yTarget;
         
+        bool walkToLastNode;
+
         public PathFinder(float x, float y) : base(x, y)
         {
             X = x;
             Y = y;
             Color = Color.Green;
             Texture = Content.Load<Texture2D>("spr_box");
-            movement_speed = 5;
+            movementSpeed = 5;
 
         }
 
@@ -55,50 +57,65 @@ namespace AStar.GameObjects
             }
             if (Path != null && Path.Count > 0)
             {
-                /*xtarget = Path.Count != 0 ? Path.Peek().Center.X : Path.Peek().Parent.Center.X;
-                ytarget = Path.Count != 0 ? Path.Peek().Center.Y : Path.Peek().Parent.Center.Y;*/
-
-                /* xtarget = Path.Peek().Parent.Center.X;
-                 ytarget = Path.Peek().Parent.Center.Y;*/
-                /*if(Path.Count == 1)
-                {
-                    xtarget = Path.Peek().Center.X;
-                    ytarget = Path.Peek().Center.Y;
-                }*/
-                xtarget = Path.Peek().Parent.Center.X;
-                ytarget = Path.Peek().Parent.Center.Y;
+                xTarget = Path.Peek().Parent.Center.X;
+                yTarget = Path.Peek().Parent.Center.Y;
                 if(Path.Count == 1)
                 {
-                    xtarget = Path.Peek().Center.X;
-                    ytarget = Path.Peek().Center.Y;
+                    if(X == Path.Peek().Parent.Center.X && Y == Path.Peek().Parent.Center.Y)
+                    {
+                        walkToLastNode = true;
+                    }
+                    if(walkToLastNode)
+                    {
+                        xTarget = Path.Peek().Center.X;
+                        yTarget = Path.Peek().Center.Y;
+                    }
+                    if(X == Path.Peek().Center.X && Y == Path.Peek().Center.Y)
+                    {
+                        walkToLastNode = false;
+                        Path.Pop();
+                    }
                 }
-                direction = G.PointDirection(X, Y, xtarget, ytarget);
-                xspeed = (float)Math.Cos(direction) * movement_speed;
-                yspeed = (float)Math.Sin(direction) * movement_speed;
+                direction = G.PointDirection(X, Y, xTarget, yTarget);
+                xSpeed = (float)Math.Cos(direction) * movementSpeed;
+                ySpeed = (float)Math.Sin(direction) * movementSpeed;
+
+                X += Math.Abs(X - xTarget) < xSpeed ? 0 : xSpeed;
+                Y += Math.Abs(Y - yTarget) < ySpeed ? 0 : ySpeed;
                 
-                X += Math.Abs(X - xtarget) < xspeed ? 0 : xspeed;
-                Y += Math.Abs(Y - ytarget) < yspeed ? 0 : yspeed;
-                if (Math.Abs(X - xtarget) < xspeed)
+                if (Math.Abs(X - xTarget) < xSpeed)
                 {
-                    X = xtarget;
+                    X = xTarget;
                 }
-                if (Math.Abs(Y - ytarget) < yspeed)
+                if (Math.Abs(Y - yTarget) < ySpeed)
                 {
-                    Y = ytarget;
+                    Y = yTarget;
                 }
-                if(X == xtarget && Y == ytarget)
+                if(X == xTarget && Y == yTarget)
                 {
-                    if(Path.Count > 1)
+                    if(Path.Count != 1 && Path.Count != 0)
                     {
                         Path.Pop();
                     }
-                    
                 }
+
+                
             }
 
             base.Update();
         }
 
+        float AdjustX()
+        {
+            X = xTarget;
+            return 0;
+        }
+
+        float AdjustY()
+        {
+            Y = yTarget;
+            return 0;
+        }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
@@ -112,6 +129,16 @@ namespace AStar.GameObjects
                 
             }
             base.Draw(spriteBatch);
+        }
+
+        public override void DrawGUI(SpriteBatch spriteBatch)
+        {
+            if(Path != null)
+            {
+                spriteBatch.DrawString(Font, Path.Count.ToString(), new Vector2(100, 100), Color.White);
+            }
+            
+            base.DrawGUI(spriteBatch);
         }
     }
 }
