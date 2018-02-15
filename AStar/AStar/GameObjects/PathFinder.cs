@@ -26,7 +26,7 @@ namespace AStar.GameObjects
         {
             X = x;
             Y = y;
-            Color = Color.Green;
+            Color = Color.Red;
             Texture = Content.Load<Texture2D>("spr_box");
             movementSpeed = 5;
 
@@ -36,7 +36,10 @@ namespace AStar.GameObjects
         {
             if(Keyboard.IsKeyDown(Keys.Space) && GetMousePressed(Mouse.LeftButton))
             {
-                Path = AStarGrid.FindPath(SnapToGrid(X,Y),GridSnapMouse);
+                if(GridSnapMouse != SnapToGrid(X,Y))
+                {
+                    Path = AStarGrid.FindPath(SnapToGrid(X, Y), GridSnapMouse);
+                }
             }
             if (Keyboard.IsKeyDown(Keys.LeftShift) && GetMousePressed(Mouse.LeftButton))
             {
@@ -80,14 +83,14 @@ namespace AStar.GameObjects
                 xSpeed = (float)Math.Cos(direction) * movementSpeed;
                 ySpeed = (float)Math.Sin(direction) * movementSpeed;
 
-                X += Math.Abs(X - xTarget) < xSpeed ? 0 : xSpeed;
-                Y += Math.Abs(Y - yTarget) < ySpeed ? 0 : ySpeed;
+                X += Math.Abs(X - xTarget) < Math.Abs(xSpeed) ? 0 : xSpeed;
+                Y += Math.Abs(Y - yTarget) < Math.Abs(ySpeed) ? 0 : ySpeed;
                 
-                if (Math.Abs(X - xTarget) < xSpeed)
+                if (Math.Abs(X - xTarget) < Math.Abs(xSpeed))
                 {
                     X = xTarget;
                 }
-                if (Math.Abs(Y - yTarget) < ySpeed)
+                if (Math.Abs(Y - yTarget) < Math.Abs(ySpeed))
                 {
                     Y = yTarget;
                 }
